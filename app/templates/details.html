@@ -1,0 +1,103 @@
+<span>TestObj: {{testObj.t1}}</span>
+<span>Current Checklist ID: {{currentChecklist["id"]}}</span>
+<!-- <header class="sec--head">
+    <div class="sec--head__inner">
+        <div class="sec--head__content">
+            <div class="sec--head__content__box">
+                <h1 class="logo">
+                    <span class="label">Pagepro</span>
+                </h1>
+            </div>
+            <div class="sec--head__content__box">
+                <h2 class="minor-title">
+                    <span class="label">{{currentChecklist.name}}</span>
+                </h2>
+            </div>
+        </div>
+        <div class="sec--head__actions">
+            <a class="trigger-page-down" scroll-to-elem=".sec--main">
+                <span class="trigger-page-down__content">
+                    <object type="image/svg+xml" data="static/img/check.svg">Scroll for more</object>
+                </span>
+            </a>
+        </div>
+    </div>
+</header>
+<main class="sec--main">
+    <div class="sec--main__inner">
+        <div class="sec--main__head">
+            <div class="tip">
+                <div class="tip__inner">
+                    <div class="tip__head">
+                        <h2 class="subtitle highlighted">
+                            <span class="label">Before you start</span>
+                        </h2>
+                    </div>
+                    <div class="tip__content">
+                        <p>
+                            {{currentChecklist.beforeStart}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sec--main__content">
+            <form class="form form--checklist" name="f">
+                <fieldset class="form__fieldset">
+                    <div class="form__content">
+                        <div class="checklist-box" *ngFor="#list of currentChecklist.lists; #li = index">
+                            <div class="checklist-box__head">
+                                <h3 class="main-title">
+                                    <span class="label">{{list.name}}</span>
+                                </h3>
+                            </div>
+                            <div class="checklist-box__content">
+                                <ul class="checklist">
+                                    <li class="checklist__item" *ngFor="#question of list.questions; #qi = index">
+                                        <div class="field field--checkbox">
+                                            <div class="field__box field__box--checkbox">
+                                                <input #in
+                                                       class="input input--checkbox"
+                                                       type="checkbox"
+                                                       name="{{'list_'+(li+1)+'-'+(qi+1)}}"
+                                                       id="{{'list_'+(li+1)+'-'+(qi+1)}}"
+                                                       (change)="changed(in)"
+                                                       ([ngModel])="checkboxList[in.name]"
+                                                       checked="{{checkboxList[in.name] == true ? 'checked' : ''}}"
+                                                       >
+                                                <div class="checkbox-holder"></div>
+                                            </div>
+                                            <div class="field__box field__box--label">
+                                                <label class="label"
+                                                       [attr.for]="'list_'+(li+1)+'-'+(qi+1)"
+                                                       [innerHtml]="question.label">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__actions">
+                        <button class="btn btn--reset btn--back" [routerLink]="['Lists']">
+                            <span class="label">Back</span>
+                        </button>
+                        <button class="btn btn--reset" ng-click="resetCheckboxes()">
+                            <span class="label">reset</span>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>
+<footer class="sec--foot">
+    <div class="sec--foot__inner">
+        <div class="sec--foot__box">
+            <p class="copy">
+                &copy; {{date | date:'y'}} Pagepro. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer> -->

@@ -1,0 +1,58 @@
+<div class="list-holder">
+    <header class="sec--head sec--head--alt">
+        <div class="sec--head__inner">
+            <div class="sec--head__content">
+                <div class="sec--head__content__box">
+                    <h1 class="logo">
+                        <span class="object-wrapper">
+                            <object type="image/svg+xml" data="static/img/pagepro_logo_white.svg" aria-label="Logo Pagepro">Your browser doesn't support svg objects</object>
+                        </span>
+                    </h1>
+                </div>
+                <div class="sec--head__content__box">
+                    <h2 class="minor-title minor-title--alt">
+                        <span class="label">Quality<br> Checklists</span>
+                    </h2>
+                    <p>
+                        Do you want to <strong>improve quality</strong> of your software development projects?
+                    </p>
+                    <p>
+                        Pick one of the checklists on the right.
+                        We are sure that they will make your work faster, easier and much safier.
+                    </p>
+                    <p class="quote">
+                        <span class="label">Pagepro Team</span>
+                    </p>
+                </div>
+            </div>
+            <footer class="sec--head__foot">
+                <div class="sec--head__foot__inner">
+                    <div class="sec--head__foot__box">
+                        <p class="copy">
+                            &copy; {{date | date:'y'}} <a href="http://www.pagepro.pl/" target="_blank">Pagepro</a>. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </header>
+    <main class="sec--main sec--main--alt">
+        <div class="sec--main__inner">
+            <div class="sec--main__content">
+                <ol class="checklists">
+                    <li class="checklists__item"
+                        *ngFor="#list of allLists">
+                        <a class="checklists__item__inner" [routerLink]="['Details', {id: list.id}]">
+                            <div class="checklists__item__counter"></div>
+                            <div class="checklists__item__content">
+                                <h3 class="special-title">
+                                    <span class="label">{{list.name}}</span>
+                                </h3>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </main>
+</div>
